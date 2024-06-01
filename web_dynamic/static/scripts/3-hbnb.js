@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // to store amenities with their status (checked or unchecked)
     const amenities = {};
-// listen for changes on all checkboxes
+    // listen for changes on all checkboxes
     $("li input[type=checkbox]").change(function () {
 		if (this.checked) {
             // if checked store in dict
@@ -25,10 +25,14 @@ $(document).ready(function () {
     // data = data returned = json obj
     // textStatus = status of request
     $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
-        if (textStatus === 'success') {
+        if (textStatus === 'success' && data === 'OK') {
         $('#api_status').addClass('available');
         } else {
         $('#api_status').removeClass('available');
         }
+    });
+
+    $.get('http://0.0.0.0:5001/api/v1/places_search/', function (data, textStatus) {
+        
     });
 });
