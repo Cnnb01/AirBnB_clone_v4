@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // to store amenities with their status (checked or unchecked)
     const amenities = {};
-    // listen for changes on all checkboxes
+// listen for changes on all checkboxes
     $("li input[type=checkbox]").change(function () {
 		if (this.checked) {
             // if checked store in dict
