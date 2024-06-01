@@ -9,3 +9,14 @@ header .logo {
     left: 20px;
     height: 100%;
 }
+#api_status {
+    right: 30px; /* Align to the right with a 30px margin */
+    transform: translateY(-50%); /* Center vertically */
+    width: 40px;
+    height: 40px; /* Circle of 40px diameter */
+    background-color: #cccccc; /* Background color #cccccc */
+    border-radius: 50%; /* Make it a circle */
+}
+header #api_status.available {
+    background-color: #ff545f;
+}
