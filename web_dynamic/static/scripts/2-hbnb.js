@@ -18,13 +18,14 @@ $(document).ready(function () {
             else amenitiesList += ', ' + id;
         }
         // update the text inside the <h4> tag within the 'div.amenities' with the updated list of selected amenities
+        console.log(amenitiesList);
         $('div.amenities h4').text(amenitiesList);
 	});
 
     // url + a function to be excuted when the request is compiete
     // data = data returned = json obj
     // textStatus = status of request
-    $.get('http://0.0.0.0:5001/api/v1/status/', function (data, textStatus) {
+    $.get('http://127.0.0.1:5001/api/v1/status/', function (data, textStatus) {
         if (textStatus === 'success') {
         $('#api_status').addClass('available');
         } else {
